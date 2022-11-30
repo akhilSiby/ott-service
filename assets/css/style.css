@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.menubar-wrap,
+.menu-list {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menubar-wrap {
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.menu-list {
+    height: 300px;
+    justify-content: space-between;
+}
+
+.menu-links {
+    width: 40px;
+}
+
+.active-link {
+    background-color: green;
+    clip-path: circle();
+}
+
+.video-wrap {
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video {
+    width: 100%;
+    margin-top: -100px;
+}
+
+.body-wrap {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 6% 94%;
+}
+
+.mainbody-wrap {
+    color: aliceblue;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+}
+
+.info-card {
+    width: 40%;
+    padding: 50px;
+    margin-top: -90vh;
+    height: 300px;
+}
+
+.info-card h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 6vw;
+}
+
+.movie-card {
+    min-width: 185px;
+    min-height: 278px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin: 10px;
+    background-color: red;
+}
+
+.cards-wrap {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(360deg, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+}
+
+.h-scroll-wrap {
+    display: inline-flex;
+    flex-direction: row;
+
+}
+
+/* Click drag scroll */
+@supports (display: grid) {
+
+    .h-scroll-wrap {
+        position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        white-space: nowrap;
+        transition: all 0.2s;
+        transform: scale(0.98);
+        will-change: transform;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    .h-scroll-wrap.h-scroll-active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+    }
+
+}
+
+/* Broadcast */
+.manage-member-wrap {
+    padding: 20px;
+}
+
+.manage-member-view {
+    display: inline-flex;
+}
+
+.user-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid green;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.user-circle:not(:first-child) {
+    margin-left: -25px;
+}
+
+.green-button {
+    margin-left: 20px;
+    width: 150px;
+    padding: 10px;
+    background-color: #21d868;
+    border-radius: 30px;
+    border: none;
+    font-weight: 800;
+}
+
+/* Broadcast end */
